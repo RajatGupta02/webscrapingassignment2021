@@ -16,7 +16,7 @@ except:
     driver.quit()
 
 userid= driver.find_element_by_id("username")
-userid.send_keys("ms1200761")
+userid.send_keys(input())
 
 passid=driver.find_element_by_id("password")
 print("Please enter your password: ")
