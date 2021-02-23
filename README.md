@@ -1,4 +1,4 @@
-# webscrapingassignment2021
+# WEB SCRAPING ASSIGNMENT DEVCLUB
 Dev Club Web Scraping Assignment 2021 using Selenium
 
 ## Moodle Auto Login
