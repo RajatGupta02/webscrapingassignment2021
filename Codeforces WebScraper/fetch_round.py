@@ -15,6 +15,7 @@ options.headless=True
 PATH = r"C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH, options=options)
 
+print("Enter the contest number you want to fetch: ")
 contest_no=input()
 
 int(contest_no)
