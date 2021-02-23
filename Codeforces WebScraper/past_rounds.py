@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from PIL import Image
 import time
 import os
+import sys
 import linecache
 
 options= webdriver.ChromeOptions()
@@ -15,8 +16,7 @@ options.headless=True
 PATH = r"C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH, options=options)
 
-print("Enter the number of past contests you want to fetch: ")
-x=int(input())
+x=int(sys.argv[1])
 driver.get("https://codeforces.com/contests")
 time.sleep(2)
 
