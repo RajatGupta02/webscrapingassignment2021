@@ -7,6 +7,7 @@ from selenium.webdriver.chrome.options import Options
 from PIL import Image
 import time
 import os
+import sys
 import linecache
 
 options= webdriver.ChromeOptions()
@@ -15,10 +16,10 @@ options.headless=True
 PATH = r"C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH, options=options)
 
-print("Enter the contest number you want to fetch: ")
-contest_no=input()
 
-int(contest_no)
+contest_no=int(sys.argv[1])
+
+
 driver.get("https://codeforces.com/contest/"+contest_no)
 time.sleep(2)
 
