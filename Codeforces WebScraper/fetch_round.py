@@ -20,6 +20,7 @@ contest_no=input()
 
 int(contest_no)
 driver.get("https://codeforces.com/contest/"+contest_no)
+time.sleep(2)
 
 os.mkdir(contest_no)
 os.chdir(contest_no)
