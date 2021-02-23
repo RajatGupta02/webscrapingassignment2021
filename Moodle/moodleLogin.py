@@ -4,6 +4,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.keys import Keys
 import time
+import sys
 import linecache
 PATH = r"C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
@@ -16,11 +17,10 @@ except:
     driver.quit()
 
 userid= driver.find_element_by_id("username")
-userid.send_keys(input())
+userid.send_keys(sys.argv[1])
 
 passid=driver.find_element_by_id("password")
-print("Please enter your password: ")
-passid.send_keys(input())
+passid.send_keys(sys.argv[2])
 
 driver.find_element_by_name("valuepkg3").clear()
 captcha=driver.find_element_by_name("valuepkg3")
